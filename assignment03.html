@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>WEB150 Assignment 3 - String Object Methods</title>
+ </head>
+ <body>
+     <h1 id="welcome"></h1>
+     <p id="info"></p>
+     
+     <script>
+		 
+		/* Create a login name from userâ€™s first and last name
+        Prompt user to enter first name and last name (assume the user enters the following format: Stani Meredith)
+        Use the String object methods to create an all lower case user name with format: first letter of first name, first 4 letters of last name. 
+        Display the user name to the user using innerHTML or textContent
+        E.g. Stani Meredith
+        User name: smere */
+		 
+		// ask the user to enter first name
+        var firstName = prompt("Enter your first name: ");
+		
+		// ask the user to enter last name
+		var lastName = prompt("Enter your last name: ");
+		 
+		// combine entries into full name
+		var fullName = firstName + " " + lastName; 
+		 
+        // welcome the user
+    	document.getElementById("welcome").innerHTML = "Hello " + fullName + "!";
+		 
+		// grab the first letter of the first name
+    	var firstLetterFirstName = firstName.charAt(0);
+		 
+		// grab the first 4 letters of the last name
+    	var firstFourLettersLastName = lastName.substring(0, 4);
+    	
+		// combine entries into username to hold the string that will be used
+		var username = firstLetterFirstName + firstFourLettersLastName; 
+		 
+		// create a variable called msg to hold a message that will be shown on the page
+        // convert the string to lowercase, and put this in the msg variable 
+        var msg = '<h2>Your username is: </h2><h3>' + username.toLowerCase() + '</h3>'; 
+        
+		// create a variable called el to hold the element whose id attribute has a value of info
+        var el = document.getElementById('info');
+        
+		 // write the message into that element
+        el.innerHTML = msg;
+        
+     </script> 
+     
+ </body>
+</html>
