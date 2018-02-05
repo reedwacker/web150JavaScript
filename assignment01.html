@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>Assignment 1</title>
+ </head>
+ <body>
+     <h3>Invoice Calculator</h3>
+     
+     <h3 id="invoiceAmount"></h3>
+     <h3 id="total"></h3> 
+     <script>
+        // ask the user for invoice amount
+        var invoiceAmount = parseInt(prompt("Enter invoice amount: ")); 
+        
+        // calculate 10% tax in decimal form
+        var taxRate = invoiceAmount * 0.1;
+        
+        // calculate total
+        var total = invoiceAmount + taxRate; 
+         
+        // display invoice amount the user entered
+        document.getElementById("invoiceAmount").innerHTML = "You entered: " + invoiceAmount; 
+        
+        // display the invoice amount total at a 10% tax rate and round the total to 2 decimal places before printing it to the user
+        document.getElementById("total").innerHTML = "Your total at 10% tax rate is: " + total.toFixed(2);
+     </script>
+       
+ </body>
+</html>
