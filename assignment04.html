@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>WEB150 Assignment 4 - Convert number grades to letter grades using if statements</title>
+ </head>
+ <body>     
+     <script>
+        // This exercise will give you some practice using if statements. To start, this application should display a prompt dialog box that gets a number grade from 0 through 100 
+        var score = prompt('Enter number grade from 0 through 100\nOr enter number 999 to end entries');
+
+        // Then, it should display an alert dialog box like the one below that displays the letter grade for that number 
+        // select message to write based on score/range 
+        if (score >= 88 && score <= 100) {
+            alert ("Number grade = " + score + "\nLetter grade = A");
+        } else if (score >= 80 && score <= 87) {
+            alert ("Number grade = " + score + "\nLetter grade = B");
+        } else if (score >= 68 && score <= 79) {
+            alert ("Number grade = " + score + "\nLetter grade = C");
+        } else if (score >= 60 && score <= 67) {
+            alert ("Number grade = " + score + "\nLetter grade = D");
+        } else if (score <= 60) {
+            alert ("Number grade = " + score + "\nLetter grade = F");
+        } else if (score == 999) {
+            alert ("Good Bye");    
+        } else {
+            alert ("Good Bye");    
+        }
+     </script>    
+ </body>
+</html>
