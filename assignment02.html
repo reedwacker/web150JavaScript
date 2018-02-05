@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<title>Assignment 2</title>
+ </head>
+ <body>
+     <h1>West Coast NBA Teams</h1>
+     <h2>Names, colors, and number of championship rings</h2>
+     
+     <p id="team1"></p>
+     <p id="team2"></p>
+     <p id="team3"></p>
+     <p id="team4"></p>
+     <p id="team5"></p>
+     <p id="team6"></p>
+     
+     <script>
+        // create objects construct template
+        function Team (name, colors, championshipsPlayed, championshipsLost){
+            
+            this.name = name;
+            this.colors = colors;
+            this.championshipsPlayed = championshipsPlayed;
+            this.championshipsLost = championshipsLost;
+            this.checkChampionshipRings = function(){
+                return this.championshipsPlayed - this.championshipsLost;
+            };
+        }
+        
+        // create two instance of the team object
+        // pass arguments to the constructor
+        var team1 = new Team ("Seattle SuperSonics", "Green and Gold", 3, 2);
+        var team2 = new Team ("Portland TrailBlazers", "Black and Red", 3, 2);
+		var team3 = new Team ("Golden State Warriors", "Blue and Gold", 9, 4); 
+		var team4 = new Team ("Sacramento Kings", "Purple and Black", 1, 0); 
+		var team5 = new Team ("Los Angeles Lakers", "Purple and Gold", 31, 15); 
+		var team6 = new Team ("Phoenix Suns", "Purple and Orange", 2, 2); 
+         
+        var team1Info = team1.name + ", " + team1.colors + ", " + "Championship rings: " + team1.checkChampionshipRings();
+        var team2Info = team2.name + ", " + team2.colors + ", " + "Championship rings: " + team2.checkChampionshipRings();
+		var team3Info = team3.name + ", " + team3.colors + ", " + "Championship rings: " + team3.checkChampionshipRings();
+		var team4Info = team4.name + ", " + team4.colors + ", " + "Championship rings: " + team4.checkChampionshipRings();
+		var team5Info = team5.name + ", " + team5.colors + ", " + "Championship rings: " + team5.checkChampionshipRings();
+		var team6Info = team6.name + ", " + team6.colors + ", " + "Championship rings: " + team6.checkChampionshipRings(); 
+         
+        // update html
+        var elTeam1 = document.getElementById('team1');
+        elTeam1.textContent = team1Info;
+         
+        var elTeam2 = document.getElementById('team2');
+        elTeam2.textContent = team2Info;
+		 
+		var elTeam3 = document.getElementById('team3');
+        elTeam3.textContent = team3Info;
+		 
+		var elTeam4 = document.getElementById('team4');
+        elTeam4.textContent = team4Info; 
+		 
+		var elTeam5 = document.getElementById('team5');
+        elTeam5.textContent = team5Info;
+		 
+		var elTeam6 = document.getElementById('team6');
+        elTeam6.textContent = team6Info; 
+     </script> 
+     
+ </body>
+</html>
